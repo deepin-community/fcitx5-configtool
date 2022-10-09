@@ -1,0 +1,27 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Tue, 10 Nov 2020 12:28:28 +0800
+Subject: make Fcitx5Migrator static
+
+---
+ src/migrator/lib/CMakeLists.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/src/migrator/lib/CMakeLists.txt b/src/migrator/lib/CMakeLists.txt
+index 0a71f8d..03f5208 100644
+--- a/src/migrator/lib/CMakeLists.txt
++++ b/src/migrator/lib/CMakeLists.txt
+@@ -3,7 +3,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX Fcitx5Migrator
+                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/Fcitx5MigratorVersion.cmake"
+                         SOVERSION 0)
+ 
+-add_library(Fcitx5Migrator SHARED
++add_library(Fcitx5Migrator STATIC
+     migratorfactoryplugin.cpp
+     migrator.cpp
+     migratorfactory.cpp
+@@ -30,5 +30,3 @@ set_target_properties(Fcitx5Migrator PROPERTIES
+ target_include_directories(Fcitx5Migrator PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}>")
+ 
+ generate_export_header(Fcitx5Migrator BASE_NAME Fcitx5Migrator)
+-
+-install(TARGETS Fcitx5Migrator LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")

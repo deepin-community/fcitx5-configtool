@@ -1,0 +1,5 @@
+usr/lib/*/qt5/plugins/kcms/kcm_fcitx5.so
+usr/share/kpackage/kcms/org.fcitx.fcitx5.kcm
+usr/share/kservices5/kcm_fcitx5.desktop
+usr/share/locale/*/LC_MESSAGES/org.fcitx.fcitx5.kcm.mo
+usr/share/metainfo/org.fcitx.fcitx5.kcm.appdata.xml

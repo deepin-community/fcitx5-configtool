@@ -1,0 +1,199 @@
+kcm-fcitx5 (5.0.13-1+u001) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Input Method Team <debian-input-method@lists.debian.org>  Thu, 16 Jun 2022 11:29:25 +0800
+
+kcm-fcitx5 (5.0.13-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 25 May 2022 11:33:16 -0400
+
+kcm-fcitx5 (5.0.12-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 16 Mar 2022 20:02:02 -0400
+
+kcm-fcitx5 (5.0.11-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 03 Feb 2022 17:09:05 -0500
+
+kcm-fcitx5 (5.0.10-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 08 Jan 2022 17:37:52 -0500
+
+kcm-fcitx5 (5.0.9-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release 5.0.9.
+  * debian/control: Require versioned build dependency fcitx5-qt
+    5.0.8+.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 15 Dec 2021 14:47:09 -0500
+
+kcm-fcitx5 (5.0.8-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release 5.0.8.
+  * debian/control: Manually add runtime dependency: libqt5svg5.
+  * Drop icon-related patch:
+    - debian/patches/0001-rename-icon-to-fcitx5.patch: Removed.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 24 Nov 2021 13:29:40 -0500
+
+kcm-fcitx5 (5.0.6-2) unstable; urgency=medium
+
+  * Bump fcitx5 and fcitx5-qt versions.
+    To rebuild with fixed libexec directory.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 08 Oct 2021 01:51:59 +0800
+
+kcm-fcitx5 (5.0.6-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 01 Oct 2021 02:42:58 +0800
+
+kcm-fcitx5 (5.0.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Upload to unstable
+  * Update Standards-Version to 4.6.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 25 Aug 2021 12:38:27 +0800
+
+kcm-fcitx5 (5.0.3-5) experimental; urgency=medium
+
+  * Lower the requirements of qtbase5 to 5.12 to align with CMakeLists.txt
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 19 May 2021 02:34:31 +0800
+
+kcm-fcitx5 (5.0.3-4) experimental; urgency=medium
+
+  * Lower the requirements of kirigami to 5.68 to align with CMakeLists.txt
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 19 May 2021 02:06:52 +0800
+
+kcm-fcitx5 (5.0.3-3) unstable; urgency=medium
+
+  * Add missing Depends for kde-config-fcitx5
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 16 May 2021 14:54:13 +0800
+
+kcm-fcitx5 (5.0.3-2) unstable; urgency=medium
+
+  * Backport patch to fix typo in desktop file
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 22 Feb 2021 00:54:24 +0800
+
+kcm-fcitx5 (5.0.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump libfcitx5-qt-dev to 5.0.3
+  * Install fcitx5-config-qt and fcitx5-migrator desktop files
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 19 Feb 2021 22:22:56 +0800
+
+kcm-fcitx5 (5.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop kirigami2 patch
+  * Bump fcitx5 to 5.0.4
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Add qtquickcontrols2-5-dev to Build-Depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 19 Jan 2021 12:24:34 +0800
+
+kcm-fcitx5 (5.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add patch to relax kirigami2 version to 5.74.0
+  * Rename icon to org.fcitx.Fcitx5
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 05 Dec 2020 19:13:56 +0800
+
+kcm-fcitx5 (5.0.0-3) unstable; urgency=medium
+
+  * Add libime-bin to fcitx5-config-qt Recommends
+    fcitx5-migrator needs libime-bin to migrate pinyin and table data.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 10 Nov 2020 14:24:37 +0800
+
+kcm-fcitx5 (5.0.0-2) unstable; urgency=medium
+
+  * Add fcitx5-migrator to fcitx5-config-qt package.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 10 Nov 2020 12:29:36 +0800
+
+kcm-fcitx5 (5.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Apply Multi-Arch hint
+  * Bump fcitx5 to 5.0.1
+  * Bump libfcitx5-qt-dev to 5.0.0
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 07 Nov 2020 01:36:54 +0800
+
+kcm-fcitx5 (0.0~git20201028.fd9831d-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Upload to unstable
+  * Bump libfcitx5-qt-dev to 0.0~git20201029
+  * Bump fcitx5 to 0.0~git20201030
+  * Not install fcitx5-migrator temporary.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 01 Nov 2020 01:32:01 +0800
+
+kcm-fcitx5 (0.0~git20200822.c8f7e15-2) experimental; urgency=medium
+
+  * Rename fcitx5-configtool to fcitx5-config-qt.
+    To follow the name convention like fcitx-config-gtk
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 27 Aug 2020 00:28:03 +0800
+
+kcm-fcitx5 (0.0~git20200822.c8f7e15-1) experimental; urgency=medium
+
+  * New upstream version 0.0~git20200822.c8f7e15
+  * Split fcitx5-configtool to separate package
+  * Bump libfcitx5-qt-dev to 0.0~git20200821
+  * Update upstream URL
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 26 Aug 2020 13:06:38 +0800
+
+kcm-fcitx5 (0.0~git20200615.21dbb51-2) unstable; urgency=medium
+
+  * Add fcitx5-module-dbus to Depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 03 Jul 2020 14:15:28 +0800
+
+kcm-fcitx5 (0.0~git20200615.21dbb51-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Update Build-Depends for new version
+  * Refresh patches
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 02 Jul 2020 13:49:34 +0800
+
+kcm-fcitx5 (0.0~git20200403.8afa921-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Enable dh_missing fail-missing
+  * Add patches to fix building
+  * Rename icon to fcitx5
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 10 Apr 2020 23:12:16 +0800
+
+kcm-fcitx5 (0.0~git20191231.d4e6ec5-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 22 Feb 2020 12:38:48 +0800

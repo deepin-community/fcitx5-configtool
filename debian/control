@@ -1,0 +1,66 @@
+Source: kcm-fcitx5
+Priority: optional
+Section: kde
+Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
+Uploaders:
+ Shengjing Zhu <zhsj@debian.org>,
+Build-Depends:
+ cmake (>= 3.3),
+ debhelper-compat (= 13),
+ extra-cmake-modules,
+ gettext,
+ iso-codes,
+ kirigami2-dev (>= 5.68.0),
+ libfcitx5-qt-dev (>= 5.0.8~),
+ libfcitx5core-dev (>= 5.0.9-2~),
+ libfcitx5utils-dev (>= 5.0.9-2~),
+ libkf5coreaddons-dev,
+ libkf5declarative-dev,
+ libkf5i18n-dev,
+ libkf5package-dev,
+ libqt5svg5-dev,
+ libqt5x11extras5-dev,
+ libxkbcommon-dev,
+ libxkbfile-dev,
+ pkg-config,
+ qtbase5-dev (>= 5.12),
+ qtquickcontrols2-5-dev,
+ xkb-data,
+Standards-Version: 4.6.1
+Rules-Requires-Root: no
+Homepage: https://github.com/fcitx/fcitx5-configtool
+Vcs-Git: https://salsa.debian.org/input-method-team/kcm-fcitx5.git
+Vcs-Browser: https://salsa.debian.org/input-method-team/kcm-fcitx5
+
+Package: fcitx5-config-qt
+Architecture: any
+Depends:
+ libqt5svg5,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Breaks:
+ kde-config-fcitx5 (<< 0.0~git20200822),
+Replaces:
+ kde-config-fcitx5 (<< 0.0~git20200822),
+Recommends:
+ libime-bin,
+Description: configuration tool for Fcitx5 (Qt version)
+ This is a configuration tool for Fcitx Input Method Framework v5.
+ .
+ It also provides fcitx5-migrator tool, which helps to migrate data
+ from Fcitx4. To migrate Fcitx4 pinyin and table data, it needs tools
+ from libime-bin package.
+
+Package: kde-config-fcitx5
+Architecture: any
+Multi-Arch: same
+Depends:
+ kde-cli-tools,
+ libqt5svg5,
+ qml-module-org-kde-kcm,
+ qml-module-org-kde-kirigami2,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: KDE configuration module for Fcitx5
+ This is a configuration module for System Settings for configuring
+ Fcitx Input Method Framework v5.
