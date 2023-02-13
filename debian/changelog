@@ -1,8 +1,59 @@
-kcm-fcitx5 (5.0.13-1+u001) UNRELEASED; urgency=medium
+fcitx5-configtool (5.0.16-1deepin) unstable; urgency=medium
 
-  * update
+  * New upstream release.
 
- -- Debian Input Method Team <debian-input-method@lists.debian.org>  Thu, 16 Jun 2022 11:29:25 +0800
+ -- Boyuan Yang <byang@debian.org>  Wed, 23 Nov 2022 14:24:46 -0500
+
+fcitx5-configtool (5.0.15-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 02 Sep 2022 15:37:29 -0400
+
+fcitx5-configtool (5.0.14-4) unstable; urgency=medium
+
+  * Undo package split (Closes: #1015923)
+    + Install fcitx5-plasma-theme-generator into kde-config-fcitx5.
+    + Install fcitx5-configtool translation files into fcitx5-config-qt.
+    + Still let fcitx5-config-qt provides fcitx5-configtool.
+    + No longer mark kde-config-fcitx5 as Multi-Arch: same.
+    + Properly add Breaks+Provides relationship.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 24 Jul 2022 11:02:44 -0400
+
+fcitx5-configtool (5.0.14-3) unstable; urgency=medium
+
+  * Source-only upload.
+  * debian/control: Promote fcitx5-configtool-kde as Recommendation
+    of package kde-config-fcitx5.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 23 Jul 2022 16:34:58 -0400
+
+fcitx5-configtool (5.0.14-2) unstable; urgency=medium
+
+  * Rename source package name following upstream.
+  * Add myself into uploaders list.
+  * Split packages:
+    + fcitx5-configtool-data
+    + fcitx5-configtool-kde (Closes: #1014928)
+    + fcitx5-config-qt
+    + kde-config-fcitx5
+  * debian/copyright: Refresh following upstream recent changes.
+  * debian/watch: Monitor upstream tarball release.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 14 Jul 2022 13:15:28 -0400
+
+kcm-fcitx5 (5.0.14-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Add new build-dep libkf5plasma-dev.
+    + Update all binary package description.
+    + Let fcitx5-config-qt provides fcitx5-configtool.
+  * debian/install: Install /usr/bin/fcitx5-plasma-theme-generator
+    into fcitx5-config-qt package.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 13 Jul 2022 15:45:18 -0400
 
 kcm-fcitx5 (5.0.13-1) unstable; urgency=medium
 
