@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.fcitx.fcitx5.kcm\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2022-02-10 20:24+0000\n"
+"POT-Creation-Date: 2022-11-19 20:25+0000\n"
 "PO-Revision-Date: 2020-08-01 05:15+0000\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>, 2022\n"
 "Language-Team: Russian (https://www.transifex.com/fcitx/teams/12005/ru/)\n"
@@ -18,9 +18,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: src/kcm/package/contents/ui/ConfigGroup.qml:67
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "Добавить метод ввода..."
 #: src/kcm/package/contents/ui/AddonPage.qml:18
 #, kde-format
 msgid "Addons"
-msgstr "Аддоны"
+msgstr "Дополнения"
 
 #: src/kcm/main.cpp:51
 #, kde-format
@@ -154,6 +154,11 @@ msgstr "Пусто"
 msgid "Fcitx 5"
 msgstr "Fcitx 5"
 
+#: src/plasmathemegenerator/main.cpp:79
+#, kde-format
+msgid "File descriptor <fd> "
+msgstr "Файловый дескриптор <fd>"
+
 #: src/kcm/package/contents/ui/main.qml:281
 #: src/kcm/package/contents/ui/main.qml:300
 #, kde-format
@@ -170,6 +175,13 @@ msgstr ""
 "Найдены обновления для установки fcitx. Вы хотите проверить наличие недавно "
 "установленных методов ввода и дополнений? Чтобы обновить уже загруженные "
 "дополнения, необходимо перезапустить fcitx."
+
+#: src/plasmathemegenerator/main.cpp:74
+#, kde-format
+msgid "Generate Fcitx 5 Classic UI Theme based on Plasma theme"
+msgstr ""
+"Создать классическую тему пользовательского интерфейса Fcitx5 на основе "
+"Plasma theme"
 
 #: src/kcm/package/contents/ui/main.qml:203
 #, kde-format
@@ -190,10 +202,20 @@ msgstr "Группа"
 msgid "Input Method"
 msgstr "Метод ввода"
 
+#: src/kcm/package/contents/ui/main.qml:355
+#, kde-format
+msgid "Input Method Off"
+msgstr "Метод ввода Выключен"
+
+#: src/kcm/package/contents/ui/main.qml:355
+#, kde-format
+msgid "Input Method On"
+msgstr "Метод ввода Включен"
+
 #: src/kcm/package/contents/ui/KeyOption.qml:141
 #, kde-format
 msgid "Key code mode"
-msgstr "Режим кода ключа"
+msgstr "Режим кода клавиши"
 
 #: src/kcm/package/contents/ui/SelectLayoutSheet.qml:32
 #, kde-format
@@ -225,6 +247,16 @@ msgstr "Хорошо"
 #, kde-format
 msgid "Only &Show Current Language"
 msgstr "&Показывать только текущий язык"
+
+#: src/plasmathemegenerator/main.cpp:78
+#, kde-format
+msgid "Output path <output> "
+msgstr "Путь вывода <output>"
+
+#: src/plasmathemegenerator/main.cpp:77
+#, kde-format
+msgid "Plasma theme name <name> "
+msgstr "Наименование Plasma theme <name>"
 
 #: src/kcm/package/contents/ui/AddonPage.qml:54
 #, kde-format
@@ -268,12 +300,12 @@ msgstr "Выбрать шрифт"
 #: src/kcm/package/contents/ui/main.qml:65
 #, kde-format
 msgid "Select Layout"
-msgstr "Выберите макет"
+msgstr "Выбрать Раскладку"
 
 #: src/kcm/package/contents/ui/main.qml:68
 #, kde-format
 msgid "Select layout for %1"
-msgstr "Выберите макет для %1"
+msgstr "Выберите раскладку для %1"
 
 #: src/kcm/package/contents/ui/main.qml:184
 #, kde-format
@@ -299,6 +331,11 @@ msgstr "Некоторые конфиги не сохраняются"
 #, kde-format
 msgid "Test Input"
 msgstr "Тестовый ввод"
+
+#: src/plasmathemegenerator/main.cpp:152
+#, kde-format
+msgid "Theme generated from Plasma Theme %1"
+msgstr "Тема сгенерирована из Plasma Theme %1"
 
 #: src/kcm/package/contents/ui/main.qml:254
 #, kde-format
@@ -347,3 +384,18 @@ msgstr "[%1]"
 #, kde-format
 msgid "edit"
 msgstr "редактировать"
+
+#: src/plasmathemegenerator/main.cpp:80
+#, kde-format
+msgid "fd"
+msgstr "fd"
+
+#: src/plasmathemegenerator/main.cpp:77
+#, kde-format
+msgid "name"
+msgstr "имя"
+
+#: src/plasmathemegenerator/main.cpp:78
+#, kde-format
+msgid "output"
+msgstr "выход"
