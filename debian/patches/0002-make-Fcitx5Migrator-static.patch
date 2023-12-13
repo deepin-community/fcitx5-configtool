@@ -12,7 +12,7 @@ index 0a71f8d..03f5208 100644
 +++ b/src/migrator/lib/CMakeLists.txt
 @@ -3,7 +3,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX Fcitx5Migrator
                          PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/Fcitx5MigratorVersion.cmake"
-                         SOVERSION 0)
+                         SOVERSION 1)
  
 -add_library(Fcitx5Migrator SHARED
 +add_library(Fcitx5Migrator STATIC
