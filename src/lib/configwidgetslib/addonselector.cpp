@@ -160,12 +160,18 @@ QSize AddonDelegate::sizeHint(const QStyleOptionViewItem &option,
     QFont font = titleFont(option.font);
     QFontMetrics fmTitle(font);
 
+    QRect titleBoundingRect = fmTitle.boundingRect(
+        index.model()->data(index, Qt::DisplayRole).toString());
+
+    QRect commentBoundingRect = option.fontMetrics.boundingRect(
+        index.model()->data(index, CommentRole).toString());
+
     return QSize(
-        fmTitle.boundingRect(
-                   index.model()->data(index, Qt::DisplayRole).toString())
-                .width() +
-            0 + MARGIN * i + pushButton_->sizeHint().width() * j,
-        fmTitle.height() + option.fontMetrics.height() + MARGIN * 2);
+        titleBoundingRect.width() + 0 + MARGIN * i +
+            pushButton_->sizeHint().width() * j,
+        titleBoundingRect.height() +
+            qMax(commentBoundingRect.height(), option.fontMetrics.height()) +
+            MARGIN * 2);
 }
 
 QList<QWidget *>
@@ -297,8 +303,17 @@ AddonSelector::AddonSelector(QWidget *parent, DBusProvider *dbus)
 
     connect(ui_->lineEdit, &QLineEdit::textChanged, proxyModel_,
             &AddonProxyModel::setFilterText);
-    connect(ui_->advancedCheckbox, &QCheckBox::toggled, this,
-            [this]() { proxyModel_->invalidate(); });
+    connect(ui_->advancedCheckbox, &QCheckBox::toggled, this, [this]() {
+        if (showAdvanced()) {
+            QMessageBox::warning(
+                this, _("Advanced options"),
+                _("The feature of enabling/disabling addons is only intended "
+                  "for advanced users who understand the potential "
+                  "implication. Fcitx needs to be restarted to make the "
+                  "changes to enable/disable to take effect."));
+        }
+        proxyModel_->invalidate();
+    });
     connect(addonModel_, &AddonProxyModel::dataChanged, this,
             [this]() { proxyModel_->invalidate(); });
 }
