@@ -1,3 +1,9 @@
+fcitx5-configtool (5.1.2-0deepin1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- zsien <quezhiyong@deepin.org>  Wed, 13 Dec 2023 13:41:06 +0800
+
 fcitx5-configtool (5.0.16-1deepin) unstable; urgency=medium
 
   * New upstream release.
