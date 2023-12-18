@@ -1,0 +1,35 @@
+diff --git a/src/configtool/main.cpp b/src/configtool/main.cpp
+index 7bce16f..21f4811 100644
+--- a/src/configtool/main.cpp
++++ b/src/configtool/main.cpp
+@@ -6,6 +6,7 @@
+  */
+ #include "config.h"
+ #include "mainwindow.h"
++#include "logging.h"
+ #include <QApplication>
+ 
+ int main(int argc, char *argv[]) {
+@@ -16,6 +17,22 @@ int main(int argc, char *argv[]) {
+     app.setOrganizationDomain("fcitx.org");
+     fcitx::registerFcitxQtDBusTypes();
+ 
++    const QString &transPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
++    QStringList qtTrans = {QDir(transPath).filePath("qt_"), QDir(transPath).filePath("qtbase_")};
++    for (const QString &trans : qtTrans) {
++        QTranslator *translator = new QTranslator;
++        const QString filename = trans + QLocale::system().name();
++        bool ret = translator->load(filename);
++        qCDebug(KCM_FCITX5) <<  "Loading translator" << filename;
++
++        if (!ret) {
++            delete translator;
++            continue;
++        }
++
++        app.installTranslator(translator);
++    }
++
+     fcitx::kcm::MainWindow mainWindow;
+     mainWindow.show();
+ 
