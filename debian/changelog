@@ -1,4 +1,4 @@
-fcitx5-configtool (5.0.16-1deepin2) unstable; urgency=medium
+fcitx5-configtool (5.0.16-0deepin2) unstable; urgency=medium
 
   * release 5.0.16-1deepin2
   * Add patch to load qt translation
