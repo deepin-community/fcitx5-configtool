@@ -1,3 +1,10 @@
+fcitx5-configtool (5.0.16-0deepin2) unstable; urgency=medium
+
+  * release 5.0.16-1deepin2
+  * Add patch to load qt translation
+
+ -- mike Chen <chenke@deepin.org>  Mon, 18 Dec 2023 15:28:01 +0800
+ 
 fcitx5-configtool (5.1.2-0deepin1) unstable; urgency=medium
 
   * New upstream version
