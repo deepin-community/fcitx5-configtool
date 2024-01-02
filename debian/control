@@ -12,9 +12,9 @@ Build-Depends:
  gettext,
  iso-codes,
  kirigami2-dev (>= 5.68.0),
- libfcitx5-qt-dev (>= 5.0.8~),
- libfcitx5core-dev (>= 5.0.9-2~),
- libfcitx5utils-dev (>= 5.0.9-2~),
+ libfcitx5-qt-dev (>= 5.1),
+ libfcitx5core-dev (>= 5.1),
+ libfcitx5utils-dev (>= 5.1),
  libkf5coreaddons-dev,
  libkf5declarative-dev,
  libkf5i18n-dev,
@@ -28,7 +28,7 @@ Build-Depends:
  qtbase5-dev (>= 5.12),
  qtquickcontrols2-5-dev,
  xkb-data,
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://github.com/fcitx/fcitx5-configtool
 Vcs-Git: https://salsa.debian.org/input-method-team/fcitx5-configtool.git
