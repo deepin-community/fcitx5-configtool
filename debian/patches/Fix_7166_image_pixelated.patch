@@ -1,0 +1,15 @@
+diff --git a/layout/keyboardlayoutwidget.cpp b/layout/keyboardlayoutwidget.cpp
+index d753ab4..f705733 100644
+--- a/layout/keyboardlayoutwidget.cpp
++++ b/layout/keyboardlayoutwidget.cpp
+@@ -676,8 +676,8 @@ void KeyboardLayoutWidget::generatePixmap(bool force) {
+     if (w == image.width() && h == image.height() && !force)
+         return;
+ 
+-    image = QPixmap(QSize(w, h) * devicePixelRatio());
+-    image.setDevicePixelRatio(devicePixelRatio());
++    image = QPixmap(QSize(w, h) * devicePixelRatioF());
++    image.setDevicePixelRatio(devicePixelRatioF());
+     image.fill(Qt::transparent);
+     QPainter painter(&image);
+     painter.setRenderHint(QPainter::Antialiasing, true);

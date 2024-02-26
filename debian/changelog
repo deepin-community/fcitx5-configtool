@@ -1,3 +1,9 @@
+fcitx5-configtool (5.1.2-1deepin2) unstable; urgency=medium
+
+  * fix #7166
+
+ -- Mike Chen <chenke@deepin.org>  Mon, 26 Feb 2024 11:33:48 +0800
+
 fcitx5-configtool (5.1.2-1deepin1) unstable; urgency=medium
 
   * add Fix_6417_not_loading_qt_translations.patch.
