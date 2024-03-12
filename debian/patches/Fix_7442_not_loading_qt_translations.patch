@@ -1,0 +1,24 @@
+diff --git a/src/migrator/app/main.cpp b/src/migrator/app/main.cpp
+index ec65d04..36fcfda 100644
+--- a/src/migrator/app/main.cpp
++++ b/src/migrator/app/main.cpp
+@@ -23,6 +23,19 @@ int main(int argc, char *argv[]) {
+     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
+     fcitx::registerFcitxQtDBusTypes();
+ 
++    const QString &transPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
++    QStringList qtTrans = {QDir(transPath).filePath("qt_"), QDir(transPath).filePath("qtbase_")};
++    for (const QString &trans : qtTrans) {
++        QTranslator *translator = new QTranslator;
++        const QString filename = trans + QLocale::system().name();
++        bool ret = translator->load(filename);
++        if (!ret) {
++            delete translator;
++            continue;
++        }
++        app.installTranslator(translator);
++    }
++
+     auto disableSessionManagement = [](QSessionManager &sm) {
+         sm.setRestartHint(QSessionManager::RestartNever);
+     };

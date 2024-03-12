@@ -1,3 +1,10 @@
+fcitx5-configtool (5.1.2-1deepin4) unstable; urgency=medium
+
+  * fix #7442
+  * fix #7443
+
+ -- Mike Chen <chenke@deepin.org>  Tue, 12 Mar 2024 13:57:54 +0800
+
 fcitx5-configtool (5.1.2-1deepin3) unstable; urgency=medium
 
   * fix #6900
