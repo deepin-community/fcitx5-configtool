@@ -1,0 +1,12 @@
+diff --git a/src/migrator/app/main.cpp b/src/migrator/app/main.cpp
+index 1b8af9e..ec65d04 100644
+--- a/src/migrator/app/main.cpp
++++ b/src/migrator/app/main.cpp
+@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
+     app.setApplicationVersion(PROJECT_VERSION);
+     app.setApplicationDisplayName(_("Fcitx 5 Migration Wizard"));
+     app.setOrganizationDomain("fcitx.org");
++    app.setAttribute(Qt::AA_UseHighDpiPixmaps);
+     fcitx::registerFcitxQtDBusTypes();
+ 
+     auto disableSessionManagement = [](QSessionManager &sm) {
