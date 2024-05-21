@@ -1,3 +1,9 @@
+fcitx5-configtool (5.1.2-1deepin6) unstable; urgency=medium
+
+  * Don't display the desktop entry of keyboard layout viewer
+
+ -- zsien <quezhiyong@deepin.org>  Tue, 21 May 2024 15:30:17 +0800
+
 fcitx5-configtool (5.1.2-1deepin5) unstable; urgency=medium
 
   * Add Fix_select_all_checkbox_inconsistent.patch.
