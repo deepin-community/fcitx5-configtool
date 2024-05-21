@@ -5,3 +5,4 @@ Fix_6900_Return_key_drawn_tweak.patch
 Fix_7443_fcitx5-migrator_HiDPI.patch
 Fix_7442_not_loading_qt_translations.patch
 Fix_select_all_checkbox_inconsistent.patch
+0008-don-t-display-the-desktop-entry-of-keyboard-layout-v.patch
