@@ -1,0 +1,20 @@
+From: zsien <quezhiyong@deepin.org>
+Date: Tue, 21 May 2024 14:54:09 +0800
+Subject: don't display the desktop entry of keyboard layout viewer
+
+---
+ layout/kbd-layout-viewer5.desktop.in | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/layout/kbd-layout-viewer5.desktop.in b/layout/kbd-layout-viewer5.desktop.in
+index 9b96b1c..5066c32 100644
+--- a/layout/kbd-layout-viewer5.desktop.in
++++ b/layout/kbd-layout-viewer5.desktop.in
+@@ -2,6 +2,7 @@
+ Exec=kbd-layout-viewer5
+ Icon=input-keyboard
+ Type=Application
++NoDisplay=true
+ 
+ Name=Keyboard layout viewer
+ Comment=View keyboard layout
